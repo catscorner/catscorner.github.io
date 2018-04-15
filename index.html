@@ -1,155 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Cat's Corner | Swing Dancing Malmö</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22053464-2"></script>
-  <script>
-    /*<!-- Google Analyctics  -->*/
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-22053464-2');
-  </script>
+    <title>Cat's Corner | Swing Dancing Malmö</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-22053464-2"></script>
+    <script>
+        /*<!-- Google Analyctics  -->*/
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-22053464-2');
+    </script>
 
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
-    
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 100%;
-    }
-    
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      color: white;
-      padding: 15px;
-    }
-    
-    blockquote {
-      line-height: initial;
-      font-size: 12px; 
-    }
-    .navbar-nav>li.events-in {
-        display:none;
-    }
-    /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
-      .events {
-        display: none;
-      }
-      .navbar-nav>li.events-in {
-          display: block;
-      }
-      .row.content {height:auto;} 
-    }
-  </style>
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 450px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+
+        /* Set black background color, white text and some padding */
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 15px;
+        }
+
+        blockquote {
+            line-height: initial;
+            font-size: 12px;
+        }
+
+        .navbar-nav > li.events-in {
+            display: none;
+        }
+
+        /* On small screens, set height to 'auto' for sidenav and grid */
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+
+            .events {
+                display: none;
+            }
+
+            .navbar-nav > li.events-in {
+                display: block;
+            }
+
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-center">
-        <li class="events-in"><a href="#">events</a></li>
-        <li><a href="#">Socialdans</a></li>
-        <li><a href="#">Vad är swing?</a></li>
-        <li><a href="#">Styrelsen</a></li>
-        <li><a href="#">Shop</a></li>
-        <li><a href="#">Bli Medlem</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  
-<div class="container-fluid text-center">    
-  <div class="row content">
-    <div class="events col-sm-2 sidenav ">
-      <ul>
-        <li>Socialdans:</li>
-        <li>Trainhop:</li>
-        <li>Kurser:</li>
-      </ul>
-    </div>
-    <div class="col-sm-8 text-center">
-      <img src="logo.jpg" alt="cats corner" style="width: 400px; height: 200px" />
-      <p><h2>SWINGDANS I MALMÖ</h2></p>
-      <p>Cats’Corner är en ideell dansförening i Malmö. Vår huvudsakliga inriktning är Lindy hop, men vi dansar även gärna Charleston, Shag, Balboa, Blues, Authentic Jazz, och andra dansstilar under swingparaplyet.</p>
-      <hr>
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ol class="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-          <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
-        <!-- Wrapper for slides -->
-        <div class="carousel-inner">
-          <div class="item active">
-            <blockquote>
-              <p>Lindy hop changed my life.</p>
-              <footer style="background-color:initial; color: black;">Daniel</footer>
-            </blockquote>
-          </div>
-
-          <div class="item">
-            <blockquote>
-              <p>Every Wednesday we come we play we dance till and it makes every week more bearable</p>
-              <footer style="background-color:initial; color: black;">Alikatten</footer>
-            </blockquote>
-          </div>
-
-          <div class="item">
-            <blockquote>
-              <p>You are not alive untill you tried dancing till the morning light is showing.</p>
-              <footer style="background-color:initial; color: black;">Anna</footer>
-            </blockquote>
-          </div>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
         </div>
-      </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-center">
+                <li class="events-in"><a href="#">Events</a></li>
+                <li><a href="#">Socialdans</a></li>
+                <li><a href="#">Vad är swing?</a></li>
+                <li><a href="#">Styrelsen</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="https://dans.se/shop/?org=catscorner;new;mship" onclick="return confirm('Denna länk tar dig till dans.se')">Bli Medlem</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="big-events col-sm-2 sidenav">
-      Big Events
-      <div class="well">
-        <img src="">
-        <p>Malmö Spring Jump 2018</p>
-      </div>
-      <div class="well">
-        <p>Swing Fall 2018</p>
-      </div>
+</nav>
+
+<div class="container-fluid text-center">
+    <div class="row content">
+        <div class="events col-sm-2 sidenav ">
+            <div class="well">
+                <p>Socialdans</p>
+                <p>Moriskan</p>
+                <p>Tid</p>
+            </div>
+            <div class="well">
+                <p>Trainhop</p>
+                <p>Studiefrämjandet</p>
+                <p>Tid</p>
+            </div>
+            <div class="well">
+                <p>Solo Jazz med Angelica</p>
+                <p>Underverket</p>
+                <p>Tid</p>
+            </div>
+        </div>
+        <div id="content" class="col-sm-8 text-center">
+            <img src="logo.jpg" alt="cats corner" style="width: 400px; height: 200px"/>
+            <p>
+            <h2>SWINGDANS I MALMÖ</h2></p>
+            <p>Cats’Corner är en ideell dansförening i Malmö. Vår huvudsakliga inriktning är Lindy hop, men vi dansar
+                även gärna Charleston, Shag, Balboa, Blues, Authentic Jazz, och andra dansstilar under
+                swingparaplyet.</p>
+            <hr>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <blockquote>
+                            <p>Lindy hop changed my life.</p>
+                            <footer style="background-color:initial; color: black;">Daniel</footer>
+                        </blockquote>
+                    </div>
+
+                    <div class="item">
+                        <blockquote>
+                            <p>Every Wednesday we come we play we dance till and it makes every week more bearable</p>
+                            <footer style="background-color:initial; color: black;">Alikatten</footer>
+                        </blockquote>
+                    </div>
+
+                    <div class="item">
+                        <blockquote>
+                            <p>You are not alive untill you tried dancing till the morning light is showing.</p>
+                            <footer style="background-color:initial; color: black;">Anna</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="big-events col-sm-2 sidenav">
+            <div class="well">
+                <img src="">
+                <p>Malmö Spring Jump 2018</p>
+            </div>
+            <div class="well">
+                <p>Swing Fall 2018</p>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
 
 <footer class="container-fluid text-center">
-  <p></p>
+    <p></p>
 </footer>
 
 </body>
+<script>
+    function loadpage(error, text, xhr) {
+        if (error) {alert('Error ' + xhr.status);return;}
+        document.getElementById('content').innerHTML = text;
+    }
+    function load(page) {
+        promise.get('/' + page + '.html').then(loadpage);
+    }
+</script>
 </html>

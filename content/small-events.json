@@ -1,0 +1,14 @@
+{[
+  {
+  "name":"hej",
+  "when":"dateTime",
+  "where": "some palce",
+  "url": "uri"
+  },
+  {
+  "name":"hej",
+  "when":"dateTime",
+  "where": "some palce",
+  "url": "uri"
+  }
+]}

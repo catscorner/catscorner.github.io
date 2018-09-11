@@ -89,10 +89,10 @@
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav navbar-center">
                 <li class="events-in"><a href="#">Events</a></li>
-                <li><a href="#">Socialdans</a></li>
-                <li><a href="#">Vad är swing?</a></li>
-                <li><a href="#">Styrelsen</a></li>
-                <li><a href="#">Shop</a></li>
+                <li><a href="#" onclick="load('social')">Socialdans</a></li>
+                <li><a href="#" onclick="load('whatis')">Vad är swing?</a></li>
+                <li><a href="#" onclick="load('board')">Styrelsen</a></li>
+                <li><a href="#" onclick="load('shop')">Shop</a></li>
                 <li><a href="https://dans.se/shop/?org=catscorner;new;mship" onclick="return confirm('Denna länk tar dig till dans.se')">Bli Medlem</a></li>
             </ul>
         </div>
@@ -177,6 +177,9 @@
     }
     function load(page) {
         promise.get('/' + page + '.html').then(loadpage);
+    }
+    function loadSmallEvents() {
+        promise.get('/content/small-events.json').then(loadpage);
     }
 </script>
 </html>

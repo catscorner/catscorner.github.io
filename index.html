@@ -103,7 +103,7 @@
 
 <div class="container-fluid text-center">
     <div class="row content">
-        <div class="events col-sm-2 sidenav ">
+        <div id="small-events" class="events col-sm-2 sidenav ">
             <div class="well">
                 <p>Socialdans</p>
                 <p><span class="glyphicon glyphicon-map-marker"></span>Moriskan</p>
@@ -143,7 +143,24 @@
     function load(page) {
         promise.get('/' + page + '.html').then(loadpage);
     }
-    function loadSmallEvents() {
+    function loadSmallEvents(error, text, xhr) {
+        if (error) {alert('Error ' + xhr.status);return;}
+        
+        var content = JSON.parse(text);
+        var innerHTML = ""
+        foreach( var event in content.events) {
+            innerHTML += 
+            "<div class=\"well\"><p>Socialdans</p>" +
+                "<p><span class=\"glyphicon glyphicon-map-marker\"></span>" +
+                event.name +
+                "</p><p><span class=\"glyphicon glyphicon-time\"></span>" +
+                event.time
+                "</p></div>";
+            
+        }
+         document.getElementById('small-events').innerHTML = innerHTML;
+    }
+    function loadStaticContent() {
         promise.get('/content/small-events.json').then(loadpage);
     }
 </script>

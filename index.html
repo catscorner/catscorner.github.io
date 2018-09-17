@@ -148,7 +148,8 @@
         
         var content = JSON.parse(text);
         var innerHTML = "";
-        foreach( var event in content.events) {
+        
+        content.events.forEach(function(event) {
             innerHTML += 
             "<div class=\"well\"><p>Socialdans</p>" +
                 "<p><span class=\"glyphicon glyphicon-map-marker\"></span>" +
@@ -157,7 +158,7 @@
                 event.time
                 "</p></div>";
             
-        }
+        });
          document.getElementById('small-events').innerHTML = innerHTML;
     }
     function loadStaticContent() {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js"></script>
     <script src="/lib/promise.min.js"></script>
+    <script src="/js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -73,46 +74,20 @@
            
         </div>
         <div class="big-events col-sm-2 sidenav">
+            <p>Evenemang</p>
             <div class="well">
                 <img src="">
-                <p>Malmö Spring Jump 2018</p>
+                <p>Malmö Spring Jump 2019</p>
             </div>
+            <p>Kurser</p>
             <div class="well">
-                <p>Swing Fall 2018</p>
+                <p>Wow-Moves</p>
             </div>
         </div>
     </div>
 </div>
 </body>
 <script>
-    function loadpage(error, text, xhr) {
-        if (error) {alert('Error ' + xhr.status);return;}
-        document.getElementById('content').innerHTML = text;
-    }
-    function load(page) {
-        promise.get('/' + page + '.html').then(loadpage);
-    }
-    function loadSmallEvents(error, text, xhr) {
-        if (error) {alert('Error ' + xhr.status);return;}
-        
-        var content = JSON.parse(text);
-        var innerHTML = "";
-        
-        content.events.forEach(function(event) {
-            innerHTML += 
-            "<div class=\"well\"><p>Socialdans</p>" +
-                "<p><span class=\"glyphicon glyphicon-map-marker\"></span>" +
-                event.name +
-                "</p><p><span class=\"glyphicon glyphicon-time\"></span>" +
-                event.time +
-                "</p></div>";
-            
-        });
-         document.getElementById('small-events').innerHTML = innerHTML;
-    }
-    function loadStaticContent() {
-        promise.get('/content/small-events.json').then(loadSmallEvents);
-    }
     loadStaticContent();
 </script>
 </html>

@@ -147,7 +147,7 @@
         if (error) {alert('Error ' + xhr.status);return;}
         
         var content = JSON.parse(text);
-        var innerHTML = ""
+        var innerHTML = "";
         foreach( var event in content.events) {
             innerHTML += 
             "<div class=\"well\"><p>Socialdans</p>" +

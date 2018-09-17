@@ -161,7 +161,8 @@
          document.getElementById('small-events').innerHTML = innerHTML;
     }
     function loadStaticContent() {
-        promise.get('/content/small-events.json').then(loadpage);
+        promise.get('/content/small-events.json').then(loadSmallEvents);
     }
+    loadStaticContent();
 </script>
 </html>
